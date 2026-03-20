@@ -1,34 +1,44 @@
-name: Porfolio
+name: Portfolio
 
 on:
-  # push:
-  #   branches: [main]
+    # push:
+    #     branches: [main]
+    workflow_dispatch:
 
-     workflow_dispatch:
+permissions:
+    pages: write      
+    id-token: write   
+    contents: read
 
- permissions:
-      pages: write
-      id-token: write
-git
-job:
-  deploy:
-    runs-on: ubuntu-latets
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
 
-         environment:
+        environment:
             name: github-pages
             url: ${{ steps.deployment.outputs.page_url }} 
 
-    steps:
-      # This action checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
-      - name: checkout code
-        uses: actions/checkout@v4
-      # A GitHub Action to enable Pages and extract various metadata about a site. It can also be used to configure various static site generators we support as starter workflows.
-      - name: Setup GitHub Pages
-        uses: action/configure-pages@v4
+        steps:
+            # get access to your Portfolio code via pre-built actions
+            # clones or checks out the code where this workflow is written
+            # STEP 1
+            - name: Checkout Code 
+              uses: actions/checkout@v4 
 
-      # static code artifacts pages
-      - name: Upload static files
-        uses: action/upload-pages-artifact@v4
+            # setup GitHub Pages
+            # STEP 2
+            - name: Setup GitHub Pages
+              uses: actions/configure-pages@v4
 
-      - name: Deploy to Github pages
-        uses: action/deploy-pages@v4
+            # static code artifacts
+            # STEP 3
+            - name: Upload static files
+              uses: actions/upload-pages-artifact@v4
+              with:
+                path: "."
+            
+            # Make page Live
+            # STEP 4
+            - name: Deploy to Github pages
+              id: deployment
+              uses: actions/deploy-pages@v4
