@@ -8,8 +8,14 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       
-        - name: hello dosto
+        - name: say hello to user
           run: echo "Hello dosto"
 
-        - name: say hello to username 
+        - name:  hello to username 
           run: echo "hello $USER" 
+
+    details:                   
+      runs-on: ubuntu-latest
+      steps:
+        - name: versions of python, docker, etc
+          run: docker --version && Pyhton --version 
