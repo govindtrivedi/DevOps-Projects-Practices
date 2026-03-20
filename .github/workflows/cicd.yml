@@ -1,0 +1,25 @@
+---
+name: CICD
+on: null
+workflow_dispatch: null
+jobs: null
+code:
+  runs-on: ubuntu-latest
+steps:
+  - name: checkout code
+    steps: echo "code clone from github"
+build:
+  runs-on: ubuntu-latest
+Steps:
+  - name: Build docker Container
+    steps: echo "Docker Container build"
+test:
+  runs-on: ubuntu-latest
+  Steps:
+    - name: Test Container
+      steps: echo "Testing the Container"
+deploy:
+  runs-on: ubuntu-latest
+  Steps:
+    - name: Deploy App
+      steps: echo "docker compose delpy app"
