@@ -1,64 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio of Govind Trivedi</title>
-    <!-- Link to your CSS file -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Govind Trivedi | DevOps Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 30px;
+      transition: 0.3s ease;
+    }
+
+    .glass:hover {
+      transform: translateY(-10px) scale(1.02);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      bottom: -5px;
+      left: 0;
+      background: #00ffd5;
+      transition: 0.3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      opacity: 0.8;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      background: linear-gradient(45deg, #00ffd5, #00aaff);
+      color: black;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px #00ffd5;
+    }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      opacity: 0.7;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
+  <div class="container">
 
-    <!-- Navigation Bar Section -->
     <header>
-        <nav>
-            <h1>John Doe</h1>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>Govind Trivedi</h1>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
-    <!-- Hero/Welcome Section -->
-    <section id="home">
-        <h2>Web Developer and Designer</h2>
-        <p>Welcome to my portfolio! I build responsive and modern websites.</p>
-        <a href="#projects" class="cta-button">View My Work</a>
-    </section>
+    <section class="hero">
+      <div class="glass">
+        <h2>Junior DevOps Engineer 🚀</h2>
+        <p>AWS | Docker | Kubernetes | Terraform | CI/CD | Linux</p>
+        <p>Passionate about building scalable infrastructure and automating deployments.</p>
+        <button class="btn">Hire Me</button>
+      </div>
 
-    <!-- About Me Section -->
-    <section id="about">
+      <div class="glass">
         <h3>About Me</h3>
-        <p>I am a front-end developer with expertise in HTML, CSS, and JavaScript. I have headed major product redesigns, resulting in increased user engagement.</p>
+        <p>1+ year of hands-on experience in cloud and DevOps technologies. Skilled in creating CI/CD pipelines, containerization, and cloud deployments.</p>
+      </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h3>Portfolio Highlights</h3>
-        <ul>
-            <li>Responsive HTML Layout</li>
-            <li>E-commerce Storefront</li>
-            <li>Interactive Form Design</li>
-        </ul>
+    <h2 id="skills">Skills</h2>
+    <section class="skills">
+      <div class="glass card"><h3>AWS & Cloud</h3><p>EC2, S3, IAM, CloudWatch</p></div>
+      <div class="glass card"><h3>CI/CD</h3><p>GitHub Actions, Jenkins</p></div>
+      <div class="glass card"><h3>Containers</h3><p>Docker, Kubernetes</p></div>
+      <div class="glass card"><h3>Infrastructure</h3><p>Terraform, Linux</p></div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h3>Get in Touch</h3>
-        <p>You can reach me via email or connect on social media.</p>
-        <a href="mailto:john.doe@example.com">Send Email</a>
+    <h2 id="projects">Projects</h2>
+    <section class="projects">
+      <div class="glass card">
+        <h3>DevOps Utilities API</h3>
+        <p>Designed and deployed scalable backend services with CI/CD pipelines and containerized environments.</p>
+      </div>
+      <div class="glass card">
+        <h3>Kubernetes Deployment</h3>
+        <p>Automated deployment using Kubernetes with monitoring and scaling features.</p>
+      </div>
+      <div class="glass card">
+        <h3>CI/CD Pipeline</h3>
+        <p>Built end-to-end CI/CD pipelines using GitHub Actions and Jenkins.</p>
+      </div>
     </section>
 
-    <!-- Footer Section -->
+    <h2 id="contact">Contact</h2>
+    <section class="glass">
+      <p>Email: tgovind052@gmail.com</p>
+      <p>Phone: 8400711424</p>
+    </section>
+
     <footer>
-        <p>&copy; 2026 John Doe. Created for [freeCodeCamp](https://freecodecamp.org/)</p>
+      <p>© 2026 Govind Trivedi | DevOps Portfolio</p>
     </footer>
 
-    <!-- Link to your JavaScript file (if any) -->
-    <script src="script.js"></script>
-
+  </div>
 </body>
 </html>
