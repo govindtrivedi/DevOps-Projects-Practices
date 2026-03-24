@@ -6,7 +6,7 @@ hello dosto kya hal chal h apke ke
 
 ## install setup 
 
-sudo apt-get install nginx 
+sudo apt-get install nginx
 
 kuch bhi chnege kr do okay 
 .
