@@ -9,4 +9,4 @@ hello dosto kya hal chal h apke ke
 sudo apt-get install nginx
 
 kuch bhi chnege kr do okay 
-.
+.kr sakte h Esme hmm log 
