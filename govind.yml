@@ -11,7 +11,8 @@ DevOps:
   - Multicloud: 1
   - Linux: 2
   - docker: 3
-  - terraform : 4 
+  - terraform: 4 
+  - Ansible: 5
 
 
 
