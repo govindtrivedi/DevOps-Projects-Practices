@@ -14,7 +14,7 @@ DevOps:
   - terraform: 4 
   - Ansible: 5
   -Automation: 6
-
+- aws
 
   
 
