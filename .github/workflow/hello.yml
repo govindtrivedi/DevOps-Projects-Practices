@@ -1,13 +1,13 @@
 name: Hello
 on: null
-push: null
-branches:
-  - main
+  push: null
+    branches: [main]
+  
 jobs: null
-Greet: null
-runs-on: ubuntu-letest
-steps:
-  - name: say hello to users
-    run: echo "Hello Github Action"
-  - name: say hello to username
-    run: echo "Hello $USER"
+  Greet: null
+    runs-on: ubuntu-letest
+    steps:
+      - name: say hello to users
+        run: echo "Hello Github Action"
+      - name: say hello to username
+        run: echo "Hello $USER"
